@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, RocketIcon, Quote, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,7 +33,7 @@ const Index = () => {
   const partners = [
     { name: "Partner 1", logo: "/lovable-uploads/43929097-f84c-4d25-a7d7-24b8b2e466ad.png" },
     { name: "Partner 2", logo: "/lovable-uploads/4ed24c8b-b4fd-4dbb-bfa3-b3654a273446.png" },
-    { name: "Partner 3", logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png" },
+    { name: "StartupTN", logo: "/lovable-uploads/eacb4afc-d5e9-4ae7-86eb-ad98a7780dac.png" },
     { name: "Partner 4", logo: "/lovable-uploads/c9b6c032-048b-4ed2-85a9-f6eb189eb546.png" },
     { name: "Partner 5", logo: "/lovable-uploads/15226261-3911-4850-bd50-a450b1bbd4f4.png" },
     { name: "Partner 6", logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png" }
