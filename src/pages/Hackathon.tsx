@@ -1,14 +1,17 @@
 
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
 import { useState } from "react";
 import { Navbar } from "@/components/navigation/Navbar";
-import { useNavigate } from "react-router-dom";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { HeroSection } from "@/components/hackathon/HeroSection";
+import { SponsorsSection } from "@/components/hackathon/SponsorsSection";
+import { ThemesSection } from "@/components/hackathon/ThemesSection";
+import { TimelineSection } from "@/components/hackathon/TimelineSection";
+import { PrizesSection } from "@/components/hackathon/PrizesSection";
+import { BannerSection } from "@/components/hackathon/BannerSection";
+import { CTASection } from "@/components/hackathon/CTASection";
 
 const Hackathon = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -18,10 +21,6 @@ const Hackathon = () => {
     setIsMenuOpen(false);
   };
 
-  const handleSubscribeClick = () => {
-    navigate('/?scrollTo=contact');
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1A1F2C] to-[#0F1218]">
       <Navbar 
@@ -29,332 +28,13 @@ const Hackathon = () => {
         setIsMenuOpen={setIsMenuOpen}
         scrollToSection={scrollToSection}
       />
-      
-      {/* Hero Section */}
-      <section className="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden px-4">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC0ydjRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBoLTJ2NEgwdjJoNHY0aDJWNmg0VjRoLTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50" />
-        <div className="container mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-primary/10 text-primary rounded-full mb-4 md:mb-6 text-sm md:text-base">
-              Event Completed
-            </div>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-              No-Code AI Venture Factory Hackathon 2024
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8 px-4">
-              India's First No-Code AI Hackathon where innovators built the future of AI without writing a single line of code
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center mb-8 md:mb-12 px-4">
-              <button 
-                onClick={() => scrollToSection('prizes')} 
-                className="w-full sm:w-auto px-4 md:px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
-              >
-                View Winners <Trophy className="w-4 h-4 md:w-5 md:h-5" />
-              </button>
-              <button 
-                onClick={() => navigate('/?scrollTo=contact')} 
-                className="w-full sm:w-auto px-4 md:px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
-              >
-                Learn More <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 text-white px-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 flex items-center gap-3 md:gap-4">
-                <Calendar className="w-6 h-6 md:w-8 md:h-8 text-primary shrink-0" />
-                <div className="text-left">
-                  <h3 className="font-semibold text-sm md:text-base">Date</h3>
-                  <p className="text-white/80 text-sm">Completed - March 15-17, 2024</p>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 flex items-center gap-3 md:gap-4">
-                <MapPin className="w-6 h-6 md:w-8 md:h-8 text-primary shrink-0" />
-                <div className="text-left">
-                  <h3 className="font-semibold text-sm md:text-base">Location</h3>
-                  <p className="text-white/80 text-sm">Chennai, India</p>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 flex items-center gap-3 md:gap-4 sm:col-span-2 md:col-span-1">
-                <Trophy className="w-6 h-6 md:w-8 md:h-8 text-primary shrink-0" />
-                <div className="text-left">
-                  <h3 className="font-semibold text-sm md:text-base">Prize Pool</h3>
-                  <p className="text-white/80 text-sm">₹5,00,000</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Sponsors Section */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#1A1F2C] mb-8 md:mb-12">Our Sponsors</h2>
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8 items-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="p-4 md:p-6 h-24 md:h-32 lg:h-40 flex items-center justify-center"
-              >
-                <img 
-                  src="/lovable-uploads/246bd235-2cba-4908-8f40-8a6e3ef49e6b.png" 
-                  alt="Sponsor Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="p-4 md:p-6 h-24 md:h-32 lg:h-40 flex items-center justify-center"
-              >
-                <img 
-                  src="/lovable-uploads/b461e009-41ca-4e02-a5ec-4b8127978361.png" 
-                  alt="Sponsor Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="p-4 md:p-6 h-24 md:h-32 lg:h-40 flex items-center justify-center"
-              >
-                <img 
-                  src="/lovable-uploads/2406ef06-9572-4d6c-85b6-645fa3cda54c.png" 
-                  alt="Sponsor Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="p-4 md:p-6 h-24 md:h-32 lg:h-40 flex items-center justify-center"
-              >
-                <img 
-                  src="/lovable-uploads/ef54d740-f41c-4794-a264-3ec174c05097.png" 
-                  alt="Sponsor Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Themes Section */}
-      <section className="py-12 md:py-20 bg-white/5">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-8 md:mb-12">Hackathon Themes</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8">
-                <Rocket className="w-10 h-10 md:w-12 md:h-12 text-primary mb-4 mx-auto" />
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">No-Code AI for Social Impact</h3>
-                <p className="text-white/80 text-sm md:text-base">
-                  Built solutions that address social challenges using No-Code AI tools, from education to healthcare.
-                </p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8">
-                <Users className="w-10 h-10 md:w-12 md:h-12 text-primary mb-4 mx-auto" />
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 md:mb-4">Enterprise No-Code AI Solutions</h3>
-                <p className="text-white/80 text-sm md:text-base">
-                  Developed AI-powered tools to solve business challenges using No-Code platforms.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-8 md:mb-12 text-center">Event Highlights</h2>
-            <div className="space-y-6 md:space-y-8">
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                <div className="w-full md:w-32 text-primary font-semibold text-lg">Day 1</div>
-                <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Kickoff & Team Formation</h3>
-                  <p className="text-white/80 text-sm md:text-base">No-Code AI tools introduction, opening ceremony, and team building activities</p>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                <div className="w-full md:w-32 text-primary font-semibold text-lg">Day 2</div>
-                <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Build & Mentorship</h3>
-                  <p className="text-white/80 text-sm md:text-base">Full day of No-Code development, workshops on AI tools, and mentor sessions</p>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                <div className="w-full md:w-32 text-primary font-semibold text-lg">Day 3</div>
-                <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Demo & Awards</h3>
-                  <p className="text-white/80 text-sm md:text-base">Project presentations, judging, and successful closing ceremony</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Prizes Section */}
-      <section id="prizes" className="py-12 md:py-20 bg-white/5">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-8 md:mb-12 text-center">Prizes</h2>
-            <div className="space-y-6 md:space-y-8">
-              {/* First Prize */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8"
-              >
-                <div className="space-y-4 md:space-y-6">
-                  <h3 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary">1st Prize</h3>
-                  <div className="text-white space-y-3 md:space-y-4">
-                    <p className="text-lg md:text-xl font-semibold">Rs.1 Lakh Cash, an iPhone 15 and $1000 worth goodies</p>
-                    <p className="text-white/80 text-sm md:text-base">
-                      After considerations by our expert team of judges, based on criteria like meaningful use of AI, No-Code and Societal Impact, the team that tops all these parameters will grab the first prize!
-                    </p>
-                  </div>
-                  <div className="mt-4 md:mt-6">
-                    <img 
-                      src="/lovable-uploads/1d24d78f-2993-449d-829f-3691c197e08d.png" 
-                      alt="First Prize Winners" 
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Second Prize */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8"
-              >
-                <div className="space-y-4 md:space-y-6">
-                  <h3 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary">2nd Prize</h3>
-                  <div className="text-white space-y-3 md:space-y-4">
-                    <p className="text-lg md:text-xl font-semibold">Rs.50,000 Cash Prize, Meta Quest 3 and $1000 worth of goodies</p>
-                    <p className="text-white/80 text-sm md:text-base">
-                      Due to various reasons, even the next Google may have to settle for (Still a kickass) Second Prize.
-                    </p>
-                  </div>
-                  <div className="mt-4 md:mt-6">
-                    <img 
-                      src="/lovable-uploads/86b6e086-ee8e-4e03-9360-5df7383bd6a8.png" 
-                      alt="Second Prize Winners" 
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Third Prize */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 md:p-8"
-              >
-                <div className="space-y-4 md:space-y-6">
-                  <h3 className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary">3rd Prize</h3>
-                  <div className="text-white space-y-3 md:space-y-4">
-                    <p className="text-lg md:text-xl font-semibold">Rs.30,000 Cash Prize and $500 worth of goodies</p>
-                    <p className="text-white/80 text-sm md:text-base">
-                      The first step is always the hardest. Trying to meet the insane standards in our criteria is going to be excruciating and valuing your efforts we are setting you up to become future champions.
-                    </p>
-                  </div>
-                  <div className="mt-4 md:mt-6">
-                    <img 
-                      src="/lovable-uploads/56d4d370-52ae-42a5-b5f2-36c06fc370b1.png" 
-                      alt="Third Prize Winners" 
-                      className="w-full h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Banner Image Section */}
-      <section className="relative w-full h-[40vh] md:h-[60vh] lg:h-[80vh]">
-        <div className="absolute inset-0 bg-black/30 z-10"></div>
-        <img 
-          src="/lovable-uploads/c5bb959c-daa6-425f-8ff1-d42bf689edaf.png"
-          alt="Hackathon participants group photo"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 z-20 flex items-center justify-center p-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white text-center max-w-4xl"
-          >
-            Thank you for making this a massive success!
-          </motion.h2>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-white/5">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4 md:mb-6">Stay Updated</h2>
-            <p className="text-lg md:text-xl text-white/90 mb-6 md:mb-8">
-              Subscribe to our newsletter to get updates about future No-Code AI events and opportunities
-            </p>
-            <button 
-              onClick={handleSubscribeClick}
-              className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-all duration-300 inline-flex items-center justify-center gap-2"
-            >
-              Subscribe Now <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
+      <HeroSection scrollToSection={scrollToSection} />
+      <SponsorsSection />
+      <ThemesSection />
+      <TimelineSection />
+      <PrizesSection />
+      <BannerSection />
+      <CTASection />
       <FooterSection />
     </div>
   );
