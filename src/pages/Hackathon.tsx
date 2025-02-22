@@ -280,7 +280,7 @@ const Hackathon = () => {
                 <div className="space-y-6">
                   <h3 className="text-5xl md:text-7xl font-bold text-primary">3rd Prize</h3>
                   <div className="text-white space-y-4">
-                    <p className="text-xl font-semibold">Rs.25,000 Cash Prize and $500 worth of goodies</p>
+                    <p className="text-xl font-semibold">Rs.30,000 Cash Prize and $500 worth of goodies</p>
                     <p className="text-white/80">
                       The first step is always the hardest. Trying to meet the insane standards in our criteria is going to be excruciating and valuing your efforts we are setting you up to become future champions.
                     </p>
