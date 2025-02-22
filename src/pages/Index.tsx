@@ -39,7 +39,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#beb4f7] to-[#a599f2]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1A1F2C] to-[#221F26]">
         {/* Animated Wave Background */}
         <div className="absolute inset-0 hero-background"></div>
 
@@ -55,7 +55,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-white text-sm font-medium mb-8"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full text-white text-sm font-medium mb-8"
             >
               <BrainCircuit className="w-4 h-4" />
               India's First AI-Focused Technology Business Incubator
@@ -68,7 +68,7 @@ const Index = () => {
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
               Empowering the Future of{" "}
-              <span className="text-white/90">
+              <span className="text-primary-light">
                 Artificial Intelligence
               </span>
             </motion.h1>
@@ -569,112 +569,3 @@ const Index = () => {
                 <li>
                   <a href="#" className="text-gray-300 hover:text-primary transition-colors">Resources Access</a>
                 </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
-                  <span className="text-gray-300">Chennai, Tamil Nadu</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                  <a href="mailto:contact@aiventurefactory.com" className="text-gray-300 hover:text-primary transition-colors">
-                    contact@aiventurefactory.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="border-t border-gray-700 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
-                © {new Date().getFullYear()} AI Venture Factory. All rights reserved.
-              </p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" className="text-gray-400 hover:text-primary text-sm">Privacy Policy</a>
-                <a href="#" className="text-gray-400 hover:text-primary text-sm">Terms of Service</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-const partners = [
-  {
-    name: "StartupTN",
-    logo: "/lovable-uploads/0e9cf162-b3aa-4ddb-be53-c6bb91f00a30.png"
-  },
-  {
-    name: "BuildShip",
-    logo: "/lovable-uploads/4ed24c8b-b4fd-4dbb-bfa3-b3654a273446.png"
-  },
-  {
-    name: "E2E Cloud",
-    logo: "/lovable-uploads/15226261-3911-4850-bd50-a450b1bbd4f4.png"
-  },
-  {
-    name: "FlutterFlow",
-    logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png"
-  },
-  {
-    name: "St. Joseph's Group of Institutions",
-    logo: "/lovable-uploads/c9b6c032-048b-4ed2-85a9-f6eb189eb546.png"
-  },
-  {
-    name: "HaiVE",
-    logo: "/lovable-uploads/43929097-f84c-4d25-a7d7-24b8b2e466ad.png"
-  }
-];
-
-const testimonials = [
-  {
-    quote: "AI Venture Factory has been instrumental in helping me build & launch my AI startup",
-    name: "Amith",
-    position: "Co-Founder, Nidum"
-  },
-  {
-    quote: "Without the hardware provided, we could not have afforded to train our models to benefit our customers",
-    name: "Meyyappan",
-    position: "Co-Founder, EdAI"
-  },
-  {
-    quote: "We came with an idea, they helped us with end to end execution",
-    name: "Rohan Vaidya",
-    position: "Co-Founder, ElluminAI"
-  }
-];
-
-const stats = [
-  {
-    number: "2",
-    label: "Startups Launched"
-  },
-  {
-    number: "31",
-    label: "Qualified Experts"
-  },
-  {
-    number: "6",
-    label: "AI Startups Incubated"
-  },
-  {
-    number: "7",
-    label: "Industry Partners"
-  }
-];
-
-export default Index;
