@@ -1,10 +1,13 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
 import { useState } from "react";
 import { Navbar } from "@/components/navigation/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Hackathon = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,6 +15,10 @@ const Hackathon = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  const handleSubscribeClick = () => {
+    navigate('/?scrollTo=contact');
   };
 
   return (
@@ -331,7 +338,10 @@ const Hackathon = () => {
             <p className="text-xl text-white/90 mb-8">
               Subscribe to our newsletter to get updates about future No-Code AI events and opportunities
             </p>
-            <button className="button-primary inline-flex items-center justify-center gap-2 text-lg px-8 py-4">
+            <button 
+              onClick={handleSubscribeClick}
+              className="button-primary inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
+            >
               Subscribe Now <ArrowRight className="w-6 h-6" />
             </button>
           </motion.div>
