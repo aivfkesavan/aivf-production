@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/navigation/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -72,14 +73,14 @@ const Index = () => {
         scrollToSection={scrollToSection}
       />
       <HeroSection stats={stats} scrollToSection={scrollToSection} />
+      <ServicesSection />
+      <AboutSection stats={stats} />
+      <MissionSection />
       <TestimonialsSection
         testimonials={testimonials}
         activeTestimonial={activeTestimonial}
         setActiveTestimonial={setActiveTestimonial}
       />
-      <ServicesSection />
-      <AboutSection stats={stats} />
-      <MissionSection />
       <PartnersSection partners={partners} />
       <ContactSection />
       <FooterSection />
