@@ -21,13 +21,13 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarPro
             />
           </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('hackathon')} 
+            <Link 
+              to="/hackathon"
               className="text-gray-600 hover:text-primary transition-colors inline-flex items-center gap-2"
             >
               <Code className="w-4 h-4" />
               Hackathon
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('services')} 
               className="text-gray-600 hover:text-primary transition-colors"
@@ -64,13 +64,13 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarPro
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
-            <button 
-              onClick={() => scrollToSection('hackathon')} 
+            <Link 
+              to="/hackathon"
               className="block w-full text-left px-4 py-2 text-gray-600 hover:text-primary transition-colors inline-flex items-center gap-2"
             >
               <Code className="w-4 h-4" />
               Hackathon
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('services')} 
               className="block w-full text-left px-4 py-2 text-gray-600 hover:text-primary transition-colors"
