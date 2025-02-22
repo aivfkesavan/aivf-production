@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -33,10 +34,10 @@ const Index = () => {
             <span className="inline-block px-4 py-1 bg-white text-primary rounded-full text-sm font-medium mb-6 shadow-md">
               India's First AI-Focused Technology Business Incubator
             </span>
-            <h1 className="heading-xl mb-6 text-white">
+            <h1 className="heading-xl mb-6 text-black">
               Welcome to AI Venture Factory
             </h1>
-            <p className="paragraph mb-8 max-w-2xl mx-auto text-white/90">
+            <p className="paragraph mb-8 max-w-2xl mx-auto text-black">
               Join India's premier AI ecosystem where startups, founders, and students come together to build the future of artificial intelligence. We foster innovation, provide expert mentorship, and accelerate AI-driven success.
             </p>
             <div className="flex items-center justify-center space-x-4">
