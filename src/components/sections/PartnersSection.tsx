@@ -21,8 +21,8 @@ export const PartnersSection = ({ partners }: PartnersSectionProps) => {
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-            {partners.slice(0, 3).map((partner, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
+            {partners.map((partner, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -30,29 +30,13 @@ export const PartnersSection = ({ partners }: PartnersSectionProps) => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex items-center justify-center p-4 md:p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
               >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="h-16 md:h-24 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
-                />
-              </motion.div>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mt-8">
-            {partners.slice(3).map((partner, index) => (
-              <motion.div
-                key={index + 3}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
-                className="flex items-center justify-center p-4 md:p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="h-16 md:h-24 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
-                />
+                <div className="w-full aspect-[3/2] relative">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="absolute inset-0 w-full h-full object-contain p-4"
+                  />
+                </div>
               </motion.div>
             ))}
           </div>
