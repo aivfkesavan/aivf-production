@@ -12,9 +12,9 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="text-2xl font-bold text-primary">AIVF</Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="#features" className="text-gray-600 hover:text-primary transition-colors">Features</Link>
-              <Link to="#about" className="text-gray-600 hover:text-primary transition-colors">About</Link>
-              <Link to="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</Link>
+              <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a>
+              <a href="#about" className="text-gray-600 hover:text-primary transition-colors">About</a>
+              <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
               <button className="button-primary">Get Started</button>
             </div>
           </div>
