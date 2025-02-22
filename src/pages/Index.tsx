@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -189,8 +190,8 @@ const Index = () => {
             >
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="/lovable-uploads/26225b5e-3f8b-4391-a463-53dc58016415.png"
-                  alt="AI Venture Factory Inauguration"
+                  src="/lovable-uploads/a38cd3fd-a0c8-4dd8-879c-8bd032036f83.png"
+                  alt="AI Venture Factory Inauguration Ceremony"
                   className="object-cover w-full h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
