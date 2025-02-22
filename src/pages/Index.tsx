@@ -24,7 +24,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/7197ae48-0638-4e33-9ef3-4af7d8191ee9.png" 
                 alt="AIVF Logo" 
-                className="h-10 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
@@ -447,7 +447,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/7197ae48-0638-4e33-9ef3-4af7d8191ee9.png" 
                   alt="AIVF Logo" 
-                  className="h-12 w-auto"
+                  className="h-16 w-auto"
                 />
               </Link>
               <p className="text-gray-300 text-sm">
