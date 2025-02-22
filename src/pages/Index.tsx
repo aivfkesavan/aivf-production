@@ -4,6 +4,30 @@ import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon, Quote } from "luci
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+// Define the stats data
+const stats = [
+  { number: "50+", label: "AI Startups Incubated" },
+  { number: "₹2Cr", label: "Funding Support" },
+  { number: "100+", label: "Industry Mentors" },
+  { number: "500+", label: "Student Innovators" }
+];
+
+// Define the testimonials data
+const testimonials = [
+  {
+    id: 1,
+    text: "AIVF helped us transform our AI startup from concept to reality.",
+    author: "John Doe",
+    role: "Founder, AI Solutions"
+  },
+  {
+    id: 2,
+    text: "The mentorship and resources provided were invaluable to our growth.",
+    author: "Jane Smith",
+    role: "CTO, Tech Innovations"
+  }
+];
+
 const Index = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
