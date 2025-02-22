@@ -39,112 +39,87 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/90 to-[#8b77e5]/90">
-        {/* Abstract Background Shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/2 -right-1/2 w-[100rem] h-[100rem] bg-primary/20 rounded-full blur-3xl transform rotate-45"></div>
-          <div className="absolute -bottom-1/2 -left-1/2 w-[100rem] h-[100rem] bg-[#8b77e5]/20 rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary to-[#8b77e5]">
+        {/* Animated Wave Background */}
+        <div className="absolute inset-0 hero-background"></div>
 
         {/* Content Container */}
-        <div className="container mx-auto px-6 relative z-10 pt-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text Content */}
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-left"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full text-white text-sm font-medium mb-8"
             >
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-medium mb-6">
-                <BrainCircuit className="w-4 h-4" />
-                India's First AI-Focused Technology Business Incubator
-              </div>
-              
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Empowering the Future of 
-                <span className="text-primary-light block mt-2">
-                  Artificial Intelligence
-                </span>
-              </h1>
-              
-              <p className="text-lg text-white/90 mb-8 max-w-xl">
-                Join India's premier AI ecosystem where startups, founders, and students come together to build the future of artificial intelligence. We foster innovation, provide expert mentorship, and accelerate AI-driven success.
-              </p>
-              
-              <div className="flex flex-wrap gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="button-primary bg-white text-primary hover:bg-white/90 flex items-center gap-2 shadow-xl"
-                >
-                  Get Started <RocketIcon className="w-4 h-4" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="button-secondary bg-transparent text-white border-white hover:bg-white/10 flex items-center gap-2"
-                >
-                  Learn More <GraduationCap className="w-4 h-4" />
-                </motion.button>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-12">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-white">
-                    <h3 className="text-3xl font-bold mb-1">{stat.number}</h3>
-                    <p className="text-sm text-white/80">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
+              <BrainCircuit className="w-4 h-4" />
+              India's First AI-Focused Technology Business Incubator
             </motion.div>
 
-            {/* Right Column - Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:block"
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl"></div>
-                <img
-                  src="/lovable-uploads/a38cd3fd-a0c8-4dd8-879c-8bd032036f83.png"
-                  alt="AI Innovation Hub"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
-                />
-                {/* Floating Elements */}
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute -top-8 -right-8 bg-white p-4 rounded-xl shadow-xl"
-                >
-                  <BrainCircuit className="w-8 h-8 text-primary" />
-                </motion.div>
-                <motion.div
-                  animate={{
-                    y: [0, 10, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1,
-                  }}
-                  className="absolute -bottom-8 -left-8 bg-white p-4 rounded-xl shadow-xl"
-                >
-                  <RocketIcon className="w-8 h-8 text-primary" />
-                </motion.div>
-              </div>
+              Empowering the Future of{" "}
+              <span className="text-primary-light">
+                Artificial Intelligence
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="text-xl text-white/90 mb-12 max-w-2xl mx-auto"
+            >
+              Join India's premier AI ecosystem where startups, founders, and students come together 
+              to build the future of artificial intelligence.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="flex flex-wrap justify-center gap-4"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-white/90 flex items-center gap-2 shadow-xl transition-colors"
+              >
+                Get Started <RocketIcon className="w-5 h-5" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-transparent text-white border-2 border-white/30 rounded-full font-semibold hover:bg-white/10 flex items-center gap-2 transition-colors"
+              >
+                Learn More <ArrowRight className="w-5 h-5" />
+              </motion.button>
             </motion.div>
-          </div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-3xl mx-auto"
+            >
+              {stats.map((stat, index) => (
+                <div key={index} className="text-white p-4 rounded-lg backdrop-blur-sm bg-white/5">
+                  <h3 className="text-4xl font-bold mb-2">{stat.number}</h3>
+                  <p className="text-sm text-white/80">{stat.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
