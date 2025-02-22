@@ -277,12 +277,21 @@ const Hackathon = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-8"
               >
-                <h3 className="text-5xl md:text-7xl font-bold text-primary mb-4">3rd Prize</h3>
-                <div className="text-white space-y-4">
-                  <p className="text-xl font-semibold">Rs.25,000 Cash Prize and $500 worth of goodies</p>
-                  <p className="text-white/80">
-                    The first step is always the hardest. Trying to meet the insane standards in our criteria is going to be excruciating and valuing your efforts we are setting you up to become future champions.
-                  </p>
+                <div className="space-y-6">
+                  <h3 className="text-5xl md:text-7xl font-bold text-primary">3rd Prize</h3>
+                  <div className="text-white space-y-4">
+                    <p className="text-xl font-semibold">Rs.25,000 Cash Prize and $500 worth of goodies</p>
+                    <p className="text-white/80">
+                      The first step is always the hardest. Trying to meet the insane standards in our criteria is going to be excruciating and valuing your efforts we are setting you up to become future champions.
+                    </p>
+                  </div>
+                  <div className="mt-6">
+                    <img 
+                      src="/lovable-uploads/56d4d370-52ae-42a5-b5f2-36c06fc370b1.png" 
+                      alt="Third Prize Winners" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
                 </div>
               </motion.div>
             </div>
