@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
 import { useState } from "react";
@@ -204,6 +203,96 @@ const Hackathon = () => {
                   <p className="text-white/80">Project presentations, judging, and successful closing ceremony</p>
                 </div>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Prizes Section */}
+      <section className="py-20 bg-white/5">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center">Prizes</h2>
+            <div className="space-y-16">
+              {/* First Prize */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col md:flex-row items-center gap-8 bg-white/10 backdrop-blur-sm rounded-lg p-8"
+              >
+                <div className="md:w-1/2 space-y-4">
+                  <h3 className="text-5xl md:text-7xl font-bold text-primary">1st Prize</h3>
+                  <div className="text-white space-y-4">
+                    <p className="text-xl font-semibold">Rs.1 Lakh Cash, an iPhone 15 and $1000 worth goodies</p>
+                    <p className="text-white/80">
+                      After considerations by our expert team of judges, based on criteria like meaningful use of AI, No-Code and Societal Impact, the team that tops all these parameters will grab the first prize!
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-1/2">
+                  <img 
+                    src="/lovable-uploads/16076c22-48a5-46cb-b4f9-b224deadcebf.png" 
+                    alt="First Prize Winners" 
+                    className="rounded-lg w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Second Prize */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col md:flex-row-reverse items-center gap-8 bg-white/10 backdrop-blur-sm rounded-lg p-8"
+              >
+                <div className="md:w-1/2 space-y-4">
+                  <h3 className="text-5xl md:text-7xl font-bold text-primary">2nd Prize</h3>
+                  <div className="text-white space-y-4">
+                    <p className="text-xl font-semibold">Rs.50,000 Cash Prize, Meta Quest 3 and $1000 worth of goodies</p>
+                    <p className="text-white/80">
+                      Due to various reasons, even the next Google may have to settle for (Still a kickass) Second Prize.
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-1/2">
+                  <img 
+                    src="/lovable-uploads/16076c22-48a5-46cb-b4f9-b224deadcebf.png" 
+                    alt="Second Prize Winners" 
+                    className="rounded-lg w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+
+              {/* Third Prize */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col md:flex-row items-center gap-8 bg-white/10 backdrop-blur-sm rounded-lg p-8"
+              >
+                <div className="md:w-1/2 space-y-4">
+                  <h3 className="text-5xl md:text-7xl font-bold text-primary">3rd Prize</h3>
+                  <div className="text-white space-y-4">
+                    <p className="text-xl font-semibold">Rs.25,000 Cash Prize and $500 worth of goodies</p>
+                    <p className="text-white/80">
+                      The first step is always the hardest. Trying to meet the insane standards in our criteria is going to be excruciating and valuing your efforts we are setting you up to become future champions.
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-1/2">
+                  <img 
+                    src="/lovable-uploads/16076c22-48a5-46cb-b4f9-b224deadcebf.png" 
+                    alt="Third Prize Winners" 
+                    className="rounded-lg w-full h-auto"
+                  />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
