@@ -15,18 +15,21 @@ const Hackathon = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
+            <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full mb-6">
+              Event Completed
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Venture Factory Hackathon 2024
+              No-Code AI Venture Factory Hackathon 2024
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Join us for a 48-hour innovation sprint to build the future of AI
+              India's First No-Code AI Hackathon where innovators built the future of AI without writing a single line of code
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-              <button className="button-primary inline-flex items-center justify-center gap-2">
-                Register Now <ArrowRight className="w-5 h-5" />
+              <button className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2">
+                View Winners <Trophy className="w-5 h-5" />
               </button>
               <button className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2">
-                Learn More <Code className="w-5 h-5" />
+                Event Gallery <Code className="w-5 h-5" />
               </button>
             </div>
 
@@ -35,7 +38,7 @@ const Hackathon = () => {
                 <Calendar className="w-8 h-8 text-primary" />
                 <div className="text-left">
                   <h3 className="font-semibold">Date</h3>
-                  <p className="text-white/80">March 15-17, 2024</p>
+                  <p className="text-white/80">Completed - March 15-17, 2024</p>
                 </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex items-center gap-4">
@@ -70,16 +73,16 @@ const Hackathon = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
                 <Rocket className="w-12 h-12 text-primary mb-4 mx-auto" />
-                <h3 className="text-xl font-semibold text-white mb-4">AI for Social Impact</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">No-Code AI for Social Impact</h3>
                 <p className="text-white/80">
-                  Build solutions that address social challenges using AI, from education to healthcare.
+                  Built solutions that address social challenges using No-Code AI tools, from education to healthcare.
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
                 <Users className="w-12 h-12 text-primary mb-4 mx-auto" />
-                <h3 className="text-xl font-semibold text-white mb-4">Enterprise AI Solutions</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Enterprise No-Code AI Solutions</h3>
                 <p className="text-white/80">
-                  Develop AI-powered tools to solve business challenges and improve efficiency.
+                  Developed AI-powered tools to solve business challenges using No-Code platforms.
                 </p>
               </div>
             </div>
@@ -96,27 +99,27 @@ const Hackathon = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center">Event Timeline</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-12 text-center">Event Highlights</h2>
             <div className="space-y-8">
               <div className="flex gap-6 items-start">
                 <div className="w-32 text-primary font-semibold">Day 1</div>
                 <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">Kickoff & Team Formation</h3>
-                  <p className="text-white/80">Registration, opening ceremony, and team building activities</p>
+                  <p className="text-white/80">No-Code AI tools introduction, opening ceremony, and team building activities</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
                 <div className="w-32 text-primary font-semibold">Day 2</div>
                 <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">Build & Mentorship</h3>
-                  <p className="text-white/80">Full day of coding, workshops, and mentor sessions</p>
+                  <p className="text-white/80">Full day of No-Code development, workshops on AI tools, and mentor sessions</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
                 <div className="w-32 text-primary font-semibold">Day 3</div>
                 <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">Demo & Awards</h3>
-                  <p className="text-white/80">Project presentations, judging, and closing ceremony</p>
+                  <p className="text-white/80">Project presentations, judging, and successful closing ceremony</p>
                 </div>
               </div>
             </div>
@@ -133,12 +136,12 @@ const Hackathon = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Innovate?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Stay Updated</h2>
             <p className="text-xl text-white/90 mb-8">
-              Join us for an exciting weekend of innovation, learning, and building the future of AI
+              Subscribe to our newsletter to get updates about future No-Code AI events and opportunities
             </p>
             <button className="button-primary inline-flex items-center justify-center gap-2 text-lg px-8 py-4">
-              Register Now <ArrowRight className="w-6 h-6" />
+              Subscribe Now <ArrowRight className="w-6 h-6" />
             </button>
           </motion.div>
         </div>
