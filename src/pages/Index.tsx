@@ -48,6 +48,13 @@ const Index = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -62,11 +69,30 @@ const Index = () => {
               />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#hackathon" className="text-gray-600 hover:text-primary transition-colors">Hackathon</a>
-              <a href="#services" className="text-gray-600 hover:text-primary transition-colors">Services</a>
-              <a href="#about" className="text-gray-600 hover:text-primary transition-colors">About</a>
-              <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a>
-              <button className="button-primary">Join Us</button>
+              <button 
+                onClick={() => scrollToSection('services')} 
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => scrollToSection('testimonials')} 
+                className="text-gray-600 hover:text-primary transition-colors"
+              >
+                Testimonials
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')} 
+                className="button-primary"
+              >
+                Join Us
+              </button>
             </div>
           </div>
         </div>
@@ -160,8 +186,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contributions Section */}
-      <section className="py-20 bg-white">
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -233,7 +259,7 @@ const Index = () => {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-24 bg-[#1e1b4b] text-white relative overflow-hidden">
+      <section id="about" className="py-24 bg-[#1e1b4b] text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
@@ -268,7 +294,7 @@ const Index = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section id="mission" className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -314,7 +340,7 @@ const Index = () => {
       </section>
 
       {/* Updated Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-primary to-[#8b77e5] overflow-hidden">
+      <section id="testimonials" className="py-24 bg-gradient-to-br from-primary to-[#8b77e5] overflow-hidden">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -378,7 +404,7 @@ const Index = () => {
       </section>
 
       {/* Ecosystem Partners Section */}
-      <section className="py-24 bg-white">
+      <section id="partners" className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -433,7 +459,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-primary to-[#8b77e5] relative overflow-hidden">
+      <section id="contact" className="py-24 bg-gradient-to-br from-primary to-[#8b77e5] relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
