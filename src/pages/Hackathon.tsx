@@ -1,10 +1,28 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
+import { useState } from "react";
+import { Navbar } from "@/components/navigation/Navbar";
 
 const Hackathon = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1A1F2C] to-[#0F1218]">
+      <Navbar 
+        isMenuOpen={isMenuOpen} 
+        setIsMenuOpen={setIsMenuOpen}
+        scrollToSection={scrollToSection}
+      />
+      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC0ydjRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBoLTJ2NEgwdjJoNHY0aDJWNmg0VjRoLTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50" />
