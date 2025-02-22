@@ -10,6 +10,7 @@ import { MissionSection } from "@/components/sections/MissionSection";
 import { PartnersSection } from "@/components/sections/PartnersSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FooterSection } from "@/components/sections/FooterSection";
+import { FundAISection } from "@/components/sections/FundAISection";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,6 +77,7 @@ const Index = () => {
       <ServicesSection />
       <AboutSection stats={stats} />
       <MissionSection />
+      <FundAISection />
       <TestimonialsSection
         testimonials={testimonials}
         activeTestimonial={activeTestimonial}
