@@ -1,9 +1,9 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
 import { useState } from "react";
 import { Navbar } from "@/components/navigation/Navbar";
 import { useNavigate } from "react-router-dom";
+import { FooterSection } from "@/components/sections/FooterSection";
 
 const Hackathon = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -353,6 +353,8 @@ const Hackathon = () => {
           </motion.div>
         </div>
       </section>
+
+      <FooterSection />
     </div>
   );
 };
