@@ -1,9 +1,11 @@
-
 import { motion } from "framer-motion";
-import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
+import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Index = () => {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -203,6 +205,61 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gradient-to-br from-primary to-[#8b77e5] overflow-hidden">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h3 className="text-white text-lg font-medium mb-4">TESTIMONIALS</h3>
+            <h2 className="text-4xl md:text-5xl font-bold text-white">What Our Founders Say</h2>
+          </motion.div>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="relative">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{
+                    opacity: activeTestimonial === index ? 1 : 0,
+                    x: activeTestimonial === index ? 0 : 100,
+                    position: activeTestimonial === index ? "relative" : "absolute",
+                  }}
+                  transition={{ duration: 0.5 }}
+                  className="text-center"
+                >
+                  <Quote className="w-16 h-16 text-white/20 mx-auto mb-8" />
+                  <p className="text-2xl md:text-3xl text-white font-medium mb-8 leading-relaxed">
+                    "{testimonial.quote}"
+                  </p>
+                  <div className="space-y-2">
+                    <h4 className="text-white font-semibold text-lg">{testimonial.name}</h4>
+                    <p className="text-white/80">{testimonial.position}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="flex justify-center items-center space-x-3 mt-12">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTestimonial(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    activeTestimonial === index ? "bg-white w-8" : "bg-white/50"
+                  }`}
+                  aria-label={`Show testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="section-padding">
         <div className="container mx-auto">
@@ -258,6 +315,24 @@ const Index = () => {
     </div>
   );
 };
+
+const testimonials = [
+  {
+    quote: "AI Venture Factory has been instrumental in helping me build & launch my AI startup",
+    name: "Amith",
+    position: "Co-Founder, Nidum"
+  },
+  {
+    quote: "Without the hardware provided, we could not have afforded to train our models to benefit our customers",
+    name: "Meyyappan",
+    position: "Co-Founder, EdAI"
+  },
+  {
+    quote: "We came with an idea, they helped us with end to end execution",
+    name: "Rohan Vaidya",
+    position: "Co-Founder, ElluminAI"
+  }
+];
 
 const stats = [
   {
