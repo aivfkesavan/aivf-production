@@ -13,24 +13,20 @@ const Index = () => {
 
   const testimonials = [
     {
-      quote: "AIVF helped us transform our AI startup from concept to reality.",
-      name: "John Doe",
-      position: "Founder, AI Solutions"
+      quote: "AI Venture Factory has been instrumental in helping me build & launch my AI startup",
+      name: "Amith",
+      position: "Co-Founder, Nidum"
     },
     {
-      quote: "The mentorship and resources provided were invaluable to our growth.",
-      name: "Jane Smith",
-      position: "CTO, Tech Innovations"
+      quote: "Without the hardware provided, we could not have afforded to train our models to benefit our customers",
+      name: "Meyyappan",
+      position: "Co-Founder, EdAI"
+    },
+    {
+      quote: "We came with an idea, they helped us with end to end execution",
+      name: "Rohan Vaidya",
+      position: "Co-Founder, ElluminAI"
     }
-  ];
-
-  const partners = [
-    { name: "Partner 1", logo: "/lovable-uploads/43929097-f84c-4d25-a7d7-24b8b2e466ad.png" },
-    { name: "Partner 2", logo: "/lovable-uploads/4ed24c8b-b4fd-4dbb-bfa3-b3654a273446.png" },
-    { name: "Partner 3", logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png" },
-    { name: "Partner 4", logo: "/lovable-uploads/c9b6c032-048b-4ed2-85a9-f6eb189eb546.png" },
-    { name: "Partner 5", logo: "/lovable-uploads/15226261-3911-4850-bd50-a450b1bbd4f4.png" },
-    { name: "Partner 6", logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png" }
   ];
 
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -308,7 +304,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Updated Testimonials Section */}
       <section className="py-24 bg-gradient-to-br from-primary to-[#8b77e5] overflow-hidden">
         <div className="container mx-auto px-6">
           <motion.div
@@ -317,47 +313,56 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h3 className="text-white text-lg font-medium mb-4">TESTIMONIALS</h3>
+            <h3 className="text-white/80 text-lg font-medium mb-4">TESTIMONIALS</h3>
             <h2 className="text-4xl md:text-5xl font-bold text-white">What Our Founders Say</h2>
           </motion.div>
 
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-6xl mx-auto">
             <div className="relative">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{
-                    opacity: activeTestimonial === index ? 1 : 0,
-                    x: activeTestimonial === index ? 0 : 100,
-                    position: activeTestimonial === index ? "relative" : "absolute",
-                  }}
-                  transition={{ duration: 0.5 }}
-                  className="text-center"
-                >
-                  <Quote className="w-16 h-16 text-white/20 mx-auto mb-8" />
-                  <p className="text-2xl md:text-3xl text-white font-medium mb-8 leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="space-y-2">
-                    <h4 className="text-white font-semibold text-lg">{testimonial.name}</h4>
-                    <p className="text-white/80">{testimonial.position}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+              <div className="flex items-center justify-center">
+                {testimonials.map((testimonial, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{
+                      opacity: activeTestimonial === index ? 1 : 0,
+                      scale: activeTestimonial === index ? 1 : 0.9,
+                      x: `${(index - activeTestimonial) * 100}%`,
+                      position: activeTestimonial === index ? "relative" : "absolute",
+                    }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full"
+                  >
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12">
+                      <div className="flex flex-col items-center">
+                        <Quote className="w-12 h-12 text-white/30 mb-6" />
+                        <p className="text-xl md:text-2xl text-white font-medium mb-8 text-center leading-relaxed">
+                          "{testimonial.quote}"
+                        </p>
+                        <div className="flex flex-col items-center">
+                          <h4 className="text-white font-semibold text-lg">{testimonial.name}</h4>
+                          <p className="text-white/80 mt-1">{testimonial.position}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
-            <div className="flex justify-center items-center space-x-3 mt-12">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTestimonial(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    activeTestimonial === index ? "bg-white w-8" : "bg-white/50"
-                  }`}
-                  aria-label={`Show testimonial ${index + 1}`}
-                />
-              ))}
+              <div className="flex justify-center items-center space-x-3 mt-12">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTestimonial(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      activeTestimonial === index 
+                        ? "bg-white w-8" 
+                        : "bg-white/40 hover:bg-white/60"
+                    }`}
+                    aria-label={`Show testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -560,35 +565,4 @@ const Index = () => {
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-              <ul className="space-y-4">
-                <li>
-                  <a href="#home" className="text-gray-300 hover:text-primary transition-colors">Home</a>
-                </li>
-                <li>
-                  <a href="#services" className="text-gray-300 hover:text-primary transition-colors">Services</a>
-                </li>
-                <li>
-                  <a href="#about" className="text-gray-300 hover:text-primary transition-colors">About</a>
-                </li>
-                <li>
-                  <a href="#testimonials" className="text-gray-300 hover:text-primary transition-colors">Testimonials</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default Index;
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.
