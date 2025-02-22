@@ -49,11 +49,17 @@ const Hackathon = () => {
               India's First No-Code AI Hackathon where innovators built the future of AI without writing a single line of code
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
-              <button className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2">
+              <button 
+                onClick={() => scrollToSection('prizes')} 
+                className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              >
                 View Winners <Trophy className="w-5 h-5" />
               </button>
-              <button className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2">
-                Event Gallery <Code className="w-5 h-5" />
+              <button 
+                onClick={() => navigate('/?scrollTo=contact')} 
+                className="px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              >
+                Learn More <ArrowRight className="w-5 h-5" />
               </button>
             </div>
 
