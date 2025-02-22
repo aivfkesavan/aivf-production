@@ -222,7 +222,7 @@ const Hackathon = () => {
       </section>
 
       {/* Prizes Section */}
-      <section className="py-20 bg-white/5">
+      <section id="prizes" className="py-20 bg-white/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
