@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ArrowRight, Check, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
+import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -12,8 +12,11 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="text-2xl font-bold text-primary">AIVF</Link>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a>
+              <a href="#home" className="text-gray-600 hover:text-primary transition-colors">Home</a>
+              <a href="#hackathon" className="text-gray-600 hover:text-primary transition-colors">Hackathon</a>
+              <a href="#services" className="text-gray-600 hover:text-primary transition-colors">Services</a>
               <a href="#about" className="text-gray-600 hover:text-primary transition-colors">About</a>
+              <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a>
               <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
               <button className="button-primary">Join Us</button>
             </div>
@@ -22,7 +25,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 section-padding hero-background">
+      <section id="home" className="pt-32 section-padding hero-background">
         <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,14 +37,14 @@ const Index = () => {
               India's First AI-Focused Technology Business Incubator
             </span>
             <h1 className="heading-xl mb-6 text-white">
-              Empowering the Next Generation of AI Innovation
+              Welcome to AI Venture Factory
             </h1>
             <p className="paragraph mb-8 max-w-2xl mx-auto text-white/90">
               Join India's premier AI ecosystem where startups, founders, and students come together to build the future of artificial intelligence. We foster innovation, provide expert mentorship, and accelerate AI-driven success.
             </p>
             <div className="flex items-center justify-center space-x-4">
               <button className="button-primary bg-white text-primary hover:bg-white/90 flex items-center">
-                Apply Now <ArrowRight className="ml-2 w-4 h-4" />
+                Get in touch <ArrowRight className="ml-2 w-4 h-4" />
               </button>
               <button className="button-secondary bg-transparent text-white border-white hover:bg-white/10">Learn More</button>
             </div>
