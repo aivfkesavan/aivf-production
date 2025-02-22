@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -47,6 +46,78 @@ const Index = () => {
               <button className="button-secondary bg-transparent text-white border-white hover:bg-white/10">Learn More</button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Contributions Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h3 className="text-primary font-semibold mb-4">OUR CONTRIBUTIONS</h3>
+            <h2 className="text-4xl font-bold text-[#1e1b4b]">Taking Your Startup to the Next Level</h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center px-6"
+            >
+              <div className="mb-6 flex justify-center">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-primary rounded-full"></div>
+                  <div className="w-12 h-12 bg-primary/30 rounded-full absolute -bottom-2 -right-2"></div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">AI Incubation Programs</h3>
+              <p className="text-gray-600">
+                Our AI Incubation Programs are designed to help startups build products that solve real-world problems. We provide mentorship, technical support, and funding to help bring your ideas to life.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-center px-6"
+            >
+              <div className="mb-6 flex justify-center">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 border-2 border-white rotate-45"></div>
+                  </div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">AI Talent Development</h3>
+              <p className="text-gray-600">
+                We offer various courses and training programs to upskill founders and students in the field of AI. Our courses are designed to help you learn the latest technologies and tools in AI.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center px-6"
+            >
+              <div className="mb-6 flex justify-center">
+                <div className="relative">
+                  <div className="w-8 h-8 bg-primary"></div>
+                  <div className="w-8 h-8 bg-primary/30 absolute -bottom-2 -right-2"></div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">AI Acceleration Services</h3>
+              <p className="text-gray-600">
+                We provide AI hardware & consulting services to businesses looking to leverage AI to solve complex problems. Our team of AI experts can help you identify the right AI solution for your business.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
