@@ -287,7 +287,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-[#1e1b4b]">Our Ecosystem Partners</h2>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             {/* First row - 3 logos */}
             <div className="grid grid-cols-3 gap-12 mb-12">
               {partners.slice(0, 3).map((partner, index) => (
@@ -296,12 +296,12 @@ const Index = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
+                  className="flex items-center justify-center p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-16 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
+                    className="h-24 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
                   />
                 </motion.div>
               ))}
@@ -315,12 +315,12 @@ const Index = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: (index + 3) * 0.1 }}
-                  className="flex items-center justify-center p-6 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
+                  className="flex items-center justify-center p-8 bg-white rounded-lg hover:shadow-lg transition-shadow duration-300"
                 >
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-16 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
+                    className="h-24 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
                   />
                 </motion.div>
               ))}
