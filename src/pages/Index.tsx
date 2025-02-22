@@ -22,28 +22,28 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 section-padding">
-        <div className="container mx-auto">
+      <section className="pt-32 section-padding hero-background">
+        <div className="container mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-1 bg-primary-light text-primary rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1 bg-white text-primary rounded-full text-sm font-medium mb-6 shadow-md">
               India's First AI-Focused Technology Business Incubator
             </span>
-            <h1 className="heading-xl mb-6">
+            <h1 className="heading-xl mb-6 text-white">
               Empowering the Next Generation of AI Innovation
             </h1>
-            <p className="paragraph mb-8 max-w-2xl mx-auto">
+            <p className="paragraph mb-8 max-w-2xl mx-auto text-white/90">
               Join India's premier AI ecosystem where startups, founders, and students come together to build the future of artificial intelligence. We foster innovation, provide expert mentorship, and accelerate AI-driven success.
             </p>
             <div className="flex items-center justify-center space-x-4">
-              <button className="button-primary flex items-center">
+              <button className="button-primary bg-white text-primary hover:bg-white/90 flex items-center">
                 Apply Now <ArrowRight className="ml-2 w-4 h-4" />
               </button>
-              <button className="button-secondary">Learn More</button>
+              <button className="button-secondary bg-transparent text-white border-white hover:bg-white/10">Learn More</button>
             </div>
           </motion.div>
         </div>
