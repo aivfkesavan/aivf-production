@@ -55,7 +55,7 @@
   }
 
   .hero-background {
-    @apply relative overflow-hidden;
+    @apply relative overflow-hidden min-h-[90vh] flex items-center;
     background: linear-gradient(135deg, #9b87f5 0%, #E5DEFF 100%);
   }
 
