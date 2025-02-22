@@ -20,7 +20,13 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-card">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="text-2xl font-bold text-primary">AIVF</Link>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/4158f1f5-3113-455e-98e7-cab362f111d1.png" 
+                alt="AIVF Logo" 
+                className="h-10 w-auto"
+              />
+            </Link>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#hackathon" className="text-gray-600 hover:text-primary transition-colors">Hackathon</a>
               <a href="#services" className="text-gray-600 hover:text-primary transition-colors">Services</a>
@@ -437,7 +443,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="space-y-6">
-              <Link to="/" className="text-2xl font-bold text-white block mb-4">AIVF</Link>
+              <Link to="/" className="block mb-4">
+                <img 
+                  src="/lovable-uploads/4158f1f5-3113-455e-98e7-cab362f111d1.png" 
+                  alt="AIVF Logo" 
+                  className="h-12 w-auto brightness-0 invert"
+                />
+              </Link>
               <p className="text-gray-300 text-sm">
                 AI Venture Factory is India's first AI-focused technology business incubator, fostering innovation and entrepreneurship.
               </p>
