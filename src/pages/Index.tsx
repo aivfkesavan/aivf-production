@@ -360,27 +360,23 @@ const Index = () => {
 const partners = [
   {
     name: "StartupTN",
-    logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png"
-  },
-  {
-    name: "DoeME",
-    logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png"
-  },
-  {
-    name: "HaiVE",
-    logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png"
-  },
-  {
-    name: "E2E Cloud",
-    logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png"
+    logo: "/lovable-uploads/0e9cf162-b3aa-4ddb-be53-c6bb91f00a30.png"
   },
   {
     name: "BuildShip",
-    logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png"
+    logo: "/lovable-uploads/4ed24c8b-b4fd-4dbb-bfa3-b3654a273446.png"
+  },
+  {
+    name: "E2E Cloud",
+    logo: "/lovable-uploads/15226261-3911-4850-bd50-a450b1bbd4f4.png"
   },
   {
     name: "FlutterFlow",
-    logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png"
+    logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png"
+  },
+  {
+    name: "St. Joseph's Group of Institutions",
+    logo: "/lovable-uploads/c9b6c032-048b-4ed2-85a9-f6eb189eb546.png"
   }
 ];
 
