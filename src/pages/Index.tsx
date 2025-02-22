@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BrainCircuit, RocketIcon, Quote } from "lucide-react";
+import { ArrowRight, BrainCircuit, RocketIcon, Quote, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -468,6 +468,14 @@ const Index = () => {
               </p>
               <div className="flex space-x-4">
                 <a 
+                  href="mailto:info@aivf.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                >
+                  <Mail className="w-5 h-5 text-white" />
+                </a>
+                <a 
                   href="https://x.com/AIVF_official"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -559,6 +567,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Footer Section */}
       <footer className="bg-[#1e1b4b] text-white py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -576,6 +585,14 @@ const Index = () => {
             </div>
             
             <div className="flex items-center gap-4">
+              <a 
+                href="mailto:info@aivf.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
               <a 
                 href="https://x.com/AIVF_official"
                 target="_blank"
