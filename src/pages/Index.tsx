@@ -156,6 +156,52 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Mission Section */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <span className="text-primary font-medium">ABOUT US</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1e1b4b] leading-tight">
+                Our Mission and Vision
+              </h2>
+              <div className="space-y-6 text-gray-600">
+                <p className="text-lg leading-relaxed">
+                  At AI Venture Factory, our mission is to foster the growth of AI startups and upskill founders and students to help them ride the AI wave. Our vision is to become the leading AI-focused business incubator in India, providing startups with the resources they need to succeed in the field of AI.
+                </p>
+                <div className="h-px bg-gray-200 my-6"></div>
+                <p className="text-lg leading-relaxed">
+                  We are a Section 8 Non-Profit Entity with 12A and 80G filings. We run on research grants from people and organizations that want the local AI ecosystem to catch up with the latest in the world.
+                </p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="/lovable-uploads/26225b5e-3f8b-4391-a463-53dc58016415.png"
+                  alt="AI Venture Factory Inauguration"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/10 rounded-full"></div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full"></div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="section-padding">
         <div className="container mx-auto">
