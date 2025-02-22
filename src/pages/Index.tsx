@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, RocketIcon, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -58,7 +57,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass-card">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -99,15 +97,10 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section - Updated with darker background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1A1F2C] to-[#0F1218]">
-        {/* Enhanced Overlay for depth */}
         <div className="absolute inset-0 bg-black/20"></div>
-        
-        {/* Animated Wave Background */}
         <div className="absolute inset-0 hero-background opacity-30"></div>
 
-        {/* Content Container */}
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,6 +149,7 @@ const Index = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-white/90 flex items-center gap-2 shadow-xl transition-colors"
               >
                 Get Started <RocketIcon className="w-5 h-5" />
@@ -163,13 +157,13 @@ const Index = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 bg-transparent text-white border-2 border-white/40 rounded-full font-semibold hover:bg-white/10 flex items-center gap-2 transition-colors"
               >
                 Learn More <ArrowRight className="w-5 h-5" />
               </motion.button>
             </motion.div>
 
-            {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -418,7 +412,6 @@ const Index = () => {
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
-            {/* First row - 3 logos */}
             <div className="grid grid-cols-3 gap-12 mb-12">
               {partners.slice(0, 3).map((partner, index) => (
                 <motion.div
@@ -437,7 +430,6 @@ const Index = () => {
               ))}
             </div>
             
-            {/* Second row - 3 logos */}
             <div className="grid grid-cols-3 gap-12">
               {partners.slice(3).map((partner, index) => (
                 <motion.div
@@ -567,7 +559,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
       <footer className="bg-[#1e1b4b] text-white py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
