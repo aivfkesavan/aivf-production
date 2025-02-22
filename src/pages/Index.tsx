@@ -1,9 +1,38 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon, Quote } from "lucide-react";
+import { ArrowRight, BrainCircuit, RocketIcon, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Index = () => {
+  const stats = [
+    { number: "50+", label: "AI Startups Incubated" },
+    { number: "₹2Cr", label: "Funding Support" },
+    { number: "100+", label: "Industry Mentors" },
+    { number: "500+", label: "Student Innovators" }
+  ];
+
+  const testimonials = [
+    {
+      quote: "AIVF helped us transform our AI startup from concept to reality.",
+      name: "John Doe",
+      position: "Founder, AI Solutions"
+    },
+    {
+      quote: "The mentorship and resources provided were invaluable to our growth.",
+      name: "Jane Smith",
+      position: "CTO, Tech Innovations"
+    }
+  ];
+
+  const partners = [
+    { name: "Partner 1", logo: "/lovable-uploads/43929097-f84c-4d25-a7d7-24b8b2e466ad.png" },
+    { name: "Partner 2", logo: "/lovable-uploads/4ed24c8b-b4fd-4dbb-bfa3-b3654a273446.png" },
+    { name: "Partner 3", logo: "/lovable-uploads/80b0aaa1-3586-4a91-8295-89daf87a0dce.png" },
+    { name: "Partner 4", logo: "/lovable-uploads/c9b6c032-048b-4ed2-85a9-f6eb189eb546.png" },
+    { name: "Partner 5", logo: "/lovable-uploads/15226261-3911-4850-bd50-a450b1bbd4f4.png" },
+    { name: "Partner 6", logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png" }
+  ];
+
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   useEffect(() => {
@@ -548,4 +577,18 @@ const Index = () => {
                   <a href="#services" className="text-gray-300 hover:text-primary transition-colors">Services</a>
                 </li>
                 <li>
-                  <a href="#about" className="text-gray-300 hover:text-
+                  <a href="#about" className="text-gray-300 hover:text-primary transition-colors">About</a>
+                </li>
+                <li>
+                  <a href="#testimonials" className="text-gray-300 hover:text-primary transition-colors">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Index;
