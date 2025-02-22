@@ -576,6 +576,10 @@ const partners = [
   {
     name: "St. Joseph's Group of Institutions",
     logo: "/lovable-uploads/c9b6c032-048b-4ed2-85a9-f6eb189eb546.png"
+  },
+  {
+    name: "HaiVE",
+    logo: "/lovable-uploads/43929097-f84c-4d25-a7d7-24b8b2e466ad.png"
   }
 ];
 
