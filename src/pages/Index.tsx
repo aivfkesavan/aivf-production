@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -12,12 +11,10 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="text-2xl font-bold text-primary">AIVF</Link>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-600 hover:text-primary transition-colors">Home</a>
               <a href="#hackathon" className="text-gray-600 hover:text-primary transition-colors">Hackathon</a>
               <a href="#services" className="text-gray-600 hover:text-primary transition-colors">Services</a>
               <a href="#about" className="text-gray-600 hover:text-primary transition-colors">About</a>
               <a href="#testimonials" className="text-gray-600 hover:text-primary transition-colors">Testimonials</a>
-              <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
               <button className="button-primary">Join Us</button>
             </div>
           </div>
