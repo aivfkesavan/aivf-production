@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
 import { useState } from "react";
@@ -226,12 +227,21 @@ const Hackathon = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-8"
               >
-                <h3 className="text-5xl md:text-7xl font-bold text-primary mb-4">1st Prize</h3>
-                <div className="text-white space-y-4">
-                  <p className="text-xl font-semibold">Rs.1 Lakh Cash, an iPhone 15 and $1000 worth goodies</p>
-                  <p className="text-white/80">
-                    After considerations by our expert team of judges, based on criteria like meaningful use of AI, No-Code and Societal Impact, the team that tops all these parameters will grab the first prize!
-                  </p>
+                <div className="space-y-6">
+                  <h3 className="text-5xl md:text-7xl font-bold text-primary">1st Prize</h3>
+                  <div className="text-white space-y-4">
+                    <p className="text-xl font-semibold">Rs.1 Lakh Cash, an iPhone 15 and $1000 worth goodies</p>
+                    <p className="text-white/80">
+                      After considerations by our expert team of judges, based on criteria like meaningful use of AI, No-Code and Societal Impact, the team that tops all these parameters will grab the first prize!
+                    </p>
+                  </div>
+                  <div className="mt-6">
+                    <img 
+                      src="/lovable-uploads/1d24d78f-2993-449d-829f-3691c197e08d.png" 
+                      alt="First Prize Winners" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
                 </div>
               </motion.div>
 
