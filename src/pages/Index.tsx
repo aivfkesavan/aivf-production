@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, BrainCircuit, GraduationCap, RocketIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
               <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a>
               <a href="#about" className="text-gray-600 hover:text-primary transition-colors">About</a>
               <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Contact</a>
-              <button className="button-primary">Get Started</button>
+              <button className="button-primary">Join Us</button>
             </div>
           </div>
         </div>
@@ -31,17 +31,17 @@ const Index = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <span className="inline-block px-4 py-1 bg-primary-light text-primary rounded-full text-sm font-medium mb-6">
-              Revolutionizing IVF
+              India's First AI-Focused Technology Business Incubator
             </span>
             <h1 className="heading-xl mb-6">
-              Transforming IVF Success with AI Technology
+              Empowering the Next Generation of AI Innovation
             </h1>
             <p className="paragraph mb-8 max-w-2xl mx-auto">
-              AIVF is pioneering the future of fertility treatment by combining artificial intelligence with medical expertise to improve IVF success rates.
+              Join India's premier AI ecosystem where startups, founders, and students come together to build the future of artificial intelligence. We foster innovation, provide expert mentorship, and accelerate AI-driven success.
             </p>
             <div className="flex items-center justify-center space-x-4">
               <button className="button-primary flex items-center">
-                Get Started <ArrowRight className="ml-2 w-4 h-4" />
+                Apply Now <ArrowRight className="ml-2 w-4 h-4" />
               </button>
               <button className="button-secondary">Learn More</button>
             </div>
@@ -60,7 +60,7 @@ const Index = () => {
           >
             <h2 className="heading-lg mb-4">Why Choose AIVF?</h2>
             <p className="paragraph max-w-2xl mx-auto">
-              Our innovative technology combines with medical expertise to provide unparalleled results in fertility treatment.
+              We provide comprehensive support to help you succeed in the AI revolution, from ideation to market success.
             </p>
           </motion.div>
           
@@ -74,7 +74,7 @@ const Index = () => {
                 className="glass-card p-6"
               >
                 <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center mb-4">
-                  <Check className="w-6 h-6 text-primary" />
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -93,9 +93,9 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-2xl mx-auto"
           >
-            <h2 className="heading-lg mb-4">Ready to Transform IVF Success?</h2>
+            <h2 className="heading-lg mb-4">Ready to Join India's AI Revolution?</h2>
             <p className="paragraph mb-8">
-              Join us in revolutionizing fertility treatment with AI technology. Contact us to learn more about how we can help you achieve success.
+              Whether you're a startup founder, aspiring entrepreneur, or student passionate about AI, we're here to help you succeed. Get in touch to learn more about our programs and opportunities.
             </p>
             <button className="button-primary">Contact Us Today</button>
           </motion.div>
@@ -107,16 +107,19 @@ const Index = () => {
 
 const features = [
   {
-    title: "AI-Powered Analysis",
-    description: "Advanced algorithms analyze embryo development to improve selection accuracy.",
+    icon: <BrainCircuit className="w-6 h-6 text-primary" />,
+    title: "AI Innovation Hub",
+    description: "Access state-of-the-art AI resources, mentorship, and infrastructure to build cutting-edge solutions.",
   },
   {
-    title: "Improved Success Rates",
-    description: "Significantly higher pregnancy rates through precise embryo selection.",
+    icon: <RocketIcon className="w-6 h-6 text-primary" />,
+    title: "Startup Acceleration",
+    description: "Comprehensive support for AI startups, from ideation to market success, backed by expert guidance.",
   },
   {
-    title: "Expert Support",
-    description: "24/7 access to fertility experts and comprehensive support throughout your journey.",
+    icon: <GraduationCap className="w-6 h-6 text-primary" />,
+    title: "Learning & Development",
+    description: "Intensive training programs and workshops to help founders and students master AI technologies.",
   },
 ];
 
