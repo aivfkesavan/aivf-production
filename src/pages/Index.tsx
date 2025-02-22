@@ -39,7 +39,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary to-[#8b77e5]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#beb4f7] to-[#a599f2]">
         {/* Animated Wave Background */}
         <div className="absolute inset-0 hero-background"></div>
 
@@ -55,7 +55,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full text-white text-sm font-medium mb-8"
+              className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-white text-sm font-medium mb-8"
             >
               <BrainCircuit className="w-4 h-4" />
               India's First AI-Focused Technology Business Incubator
@@ -68,7 +68,7 @@ const Index = () => {
               className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
             >
               Empowering the Future of{" "}
-              <span className="text-primary-light">
+              <span className="text-white/90">
                 Artificial Intelligence
               </span>
             </motion.h1>
@@ -99,7 +99,7 @@ const Index = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-transparent text-white border-2 border-white/30 rounded-full font-semibold hover:bg-white/10 flex items-center gap-2 transition-colors"
+                className="px-8 py-4 bg-transparent text-white border-2 border-white/40 rounded-full font-semibold hover:bg-white/10 flex items-center gap-2 transition-colors"
               >
                 Learn More <ArrowRight className="w-5 h-5" />
               </motion.button>
@@ -113,9 +113,9 @@ const Index = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-3xl mx-auto"
             >
               {stats.map((stat, index) => (
-                <div key={index} className="text-white p-4 rounded-lg backdrop-blur-sm bg-white/5">
+                <div key={index} className="text-white p-4 rounded-lg backdrop-blur-sm bg-white/10">
                   <h3 className="text-4xl font-bold mb-2">{stat.number}</h3>
-                  <p className="text-sm text-white/80">{stat.label}</p>
+                  <p className="text-sm text-white/90">{stat.label}</p>
                 </div>
               ))}
             </motion.div>
