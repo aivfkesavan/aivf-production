@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin, Trophy, Users, Code, Rocket } from "lucide-react";
 import { useState } from "react";
@@ -92,48 +93,48 @@ const Hackathon = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="p-6"
+                className="p-6 h-32 md:h-40 flex items-center justify-center"
               >
                 <img 
                   src="/lovable-uploads/246bd235-2cba-4908-8f40-8a6e3ef49e6b.png" 
                   alt="Sponsor Logo" 
-                  className="w-full h-auto max-h-12 object-contain"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="p-6"
+                className="p-6 h-32 md:h-40 flex items-center justify-center"
               >
                 <img 
                   src="/lovable-uploads/b461e009-41ca-4e02-a5ec-4b8127978361.png" 
                   alt="Sponsor Logo" 
-                  className="w-full h-auto max-h-12 object-contain"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="p-6"
+                className="p-6 h-32 md:h-40 flex items-center justify-center"
               >
                 <img 
                   src="/lovable-uploads/2406ef06-9572-4d6c-85b6-645fa3cda54c.png" 
                   alt="Sponsor Logo" 
-                  className="w-full h-auto max-h-12 object-contain"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="p-6"
+                className="p-6 h-32 md:h-40 flex items-center justify-center"
               >
                 <img 
                   src="/lovable-uploads/ef54d740-f41c-4794-a264-3ec174c05097.png" 
                   alt="Sponsor Logo" 
-                  className="w-full h-auto max-h-12 object-contain"
+                  className="w-full h-full object-contain"
                 />
               </motion.div>
             </div>
