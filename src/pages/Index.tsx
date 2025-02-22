@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 
 const Index = () => {
   const stats = [
-    { number: "50+", label: "AI Startups Incubated" },
-    { number: "₹2Cr", label: "Funding Support" },
-    { number: "100+", label: "Industry Mentors" },
-    { number: "500+", label: "Student Innovators" }
+    { number: "2", label: "Startups Launched" },
+    { number: "31", label: "Qualified Experts" },
+    { number: "6", label: "AI Startups Incubated" },
+    { number: "7", label: "Industry Partners" }
   ];
 
   const testimonials = [
