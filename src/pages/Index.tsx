@@ -78,12 +78,12 @@ const Index = () => {
       <AboutSection stats={stats} />
       <MissionSection />
       <FundAISection />
+      <PartnersSection partners={partners} />
       <TestimonialsSection
         testimonials={testimonials}
         activeTestimonial={activeTestimonial}
         setActiveTestimonial={setActiveTestimonial}
       />
-      <PartnersSection partners={partners} />
       <ContactSection />
       <FooterSection />
     </div>

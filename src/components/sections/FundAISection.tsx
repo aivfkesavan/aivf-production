@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export const FundAISection = () => {
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-br from-[#8B5CF6] to-[#D946EF] relative overflow-hidden">
+    <section className="py-20 md:py-24 bg-gradient-to-br from-[#1A1F2C] to-[#0F1218] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC0ydjRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBoLTJ2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NEgwdjJoNHY0aDJ2LTRoNHYtMkg2ek02IDRWMEg0djRIMHYyaDR2NGgyVjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -46,7 +46,7 @@ export const FundAISection = () => {
               href="https://ms.aivf.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F97316] hover:bg-[#EA580C] text-white rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Fund Now
               <ArrowRight className="w-5 h-5" />
