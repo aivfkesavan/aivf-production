@@ -447,7 +447,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/7197ae48-0638-4e33-9ef3-4af7d8191ee9.png" 
                   alt="AIVF Logo" 
-                  className="h-12 w-auto brightness-0 invert"
+                  className="h-12 w-auto"
                 />
               </Link>
               <p className="text-gray-300 text-sm">
