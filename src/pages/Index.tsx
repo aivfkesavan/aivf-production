@@ -430,59 +430,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section id="features" className="section-padding">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="heading-lg mb-4">Why Choose AIVF?</h2>
-            <p className="paragraph max-w-2xl mx-auto">
-              We provide comprehensive support to help you succeed in the AI revolution, from ideation to market success.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card p-6"
-              >
-                <div className="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="section-padding bg-primary-light">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-2xl mx-auto"
-          >
-            <h2 className="heading-lg mb-4">Ready to Join India's AI Revolution?</h2>
-            <p className="paragraph mb-8">
-              Whether you're a startup founder, aspiring entrepreneur, or student passionate about AI, we're here to help you succeed. Get in touch to learn more about our programs and opportunities.
-            </p>
-            <button className="button-primary">Contact Us Today</button>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
@@ -545,24 +492,6 @@ const stats = [
     number: "7",
     label: "Industry Partners"
   }
-];
-
-const features = [
-  {
-    icon: <BrainCircuit className="w-6 h-6 text-primary" />,
-    title: "AI Innovation Hub",
-    description: "Access state-of-the-art AI resources, mentorship, and infrastructure to build cutting-edge solutions.",
-  },
-  {
-    icon: <RocketIcon className="w-6 h-6 text-primary" />,
-    title: "Startup Acceleration",
-    description: "Comprehensive support for AI startups, from ideation to market success, backed by expert guidance.",
-  },
-  {
-    icon: <GraduationCap className="w-6 h-6 text-primary" />,
-    title: "Learning & Development",
-    description: "Intensive training programs and workshops to help founders and students master AI technologies.",
-  },
 ];
 
 export default Index;
