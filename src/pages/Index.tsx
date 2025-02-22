@@ -307,9 +307,9 @@ const Index = () => {
               ))}
             </div>
             
-            {/* Second row - 2 logos centered */}
-            <div className="grid grid-cols-2 gap-12 max-w-2xl mx-auto">
-              {partners.slice(3, 5).map((partner, index) => (
+            {/* Second row - 3 logos */}
+            <div className="grid grid-cols-3 gap-12">
+              {partners.slice(3).map((partner, index) => (
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, y: 20 }}
