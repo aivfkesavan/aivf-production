@@ -22,7 +22,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/4158f1f5-3113-455e-98e7-cab362f111d1.png" 
+                src="/lovable-uploads/7197ae48-0638-4e33-9ef3-4af7d8191ee9.png" 
                 alt="AIVF Logo" 
                 className="h-10 w-auto"
               />
@@ -445,7 +445,7 @@ const Index = () => {
             <div className="space-y-6">
               <Link to="/" className="block mb-4">
                 <img 
-                  src="/lovable-uploads/4158f1f5-3113-455e-98e7-cab362f111d1.png" 
+                  src="/lovable-uploads/7197ae48-0638-4e33-9ef3-4af7d8191ee9.png" 
                   alt="AIVF Logo" 
                   className="h-12 w-auto brightness-0 invert"
                 />
