@@ -11,6 +11,7 @@ import { PartnersSection } from "@/components/sections/PartnersSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FooterSection } from "@/components/sections/FooterSection";
 import { FundAISection } from "@/components/sections/FundAISection";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,6 +87,7 @@ const Index = () => {
       <PartnersSection partners={partners} />
       <ContactSection />
       <FooterSection />
+      <Toaster />
     </div>
   );
 };
