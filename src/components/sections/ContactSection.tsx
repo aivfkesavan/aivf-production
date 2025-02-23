@@ -89,7 +89,10 @@ const ContactForm = () => {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
+          'Origin': window.location.origin,
         },
+        mode: 'cors',
+        credentials: 'include',
         body: JSON.stringify({
           name: `${formData.firstName} ${formData.lastName}`.trim(),
           user_email: formData.email,
@@ -99,16 +102,25 @@ const ContactForm = () => {
         })
       });
 
-      console.log("API Response:", response);
+      console.log("API Response Status:", response.status);
+      console.log("API Response Headers:", Object.fromEntries(response.headers.entries()));
+
+      let responseData;
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        responseData = await response.json();
+      } else {
+        responseData = await response.text();
+      }
+      console.log("API Response Data:", responseData);
 
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error("API Error:", errorData);
-        throw new Error(errorData.detail || 'Failed to send message');
+        throw new Error(
+          typeof responseData === 'object' ? 
+            responseData.detail || 'Failed to send message' : 
+            'Failed to send message'
+        );
       }
-
-      const data = await response.json();
-      console.log("API Success:", data);
 
       toast({
         title: "Success!",
@@ -128,7 +140,7 @@ const ContactForm = () => {
       console.error("Form submission error:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again later.",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
         variant: "destructive",
         duration: 5000,
       });
