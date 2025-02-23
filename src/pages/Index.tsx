@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "@/components/navigation/Navbar";
@@ -56,10 +57,13 @@ const Index = () => {
     const params = new URLSearchParams(location.search);
     const section = params.get('section');
     if (section) {
-      scrollToSection(section);
-      window.history.replaceState({}, '', '/');
+      // Add a small delay to ensure the page has loaded
+      setTimeout(() => {
+        scrollToSection(section);
+        window.history.replaceState({}, '', '/');
+      }, 100);
     }
-  }, [location]);
+  }, [location.search]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

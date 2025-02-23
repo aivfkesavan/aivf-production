@@ -1,7 +1,6 @@
 
 import { Menu, Code } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 type NavbarProps = {
   isMenuOpen: boolean;
@@ -13,11 +12,15 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarPro
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleNavigation = (sectionId: string) => {
-    if (location.pathname === '/') {
-      scrollToSection(sectionId);
+  const handleNavigation = async (sectionId: string) => {
+    if (location.pathname !== '/') {
+      // First navigate to home page
+      await navigate('/');
+      // Then add the section parameter
+      window.history.replaceState({}, '', `/?section=${sectionId}`);
+      // Let the Index component handle the scrolling via its useEffect
     } else {
-      navigate(`/?section=${sectionId}`);
+      scrollToSection(sectionId);
     }
     setIsMenuOpen(false);
   };
