@@ -1,5 +1,5 @@
-
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Navbar } from "@/components/navigation/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
@@ -16,6 +16,7 @@ import { Toaster } from "@/components/ui/toaster";
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const location = useLocation();
 
   const stats: Stat[] = [
     { number: "2", label: "Startups Launched" },
@@ -52,12 +53,13 @@ const Index = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonial((current) => (current + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+    const params = new URLSearchParams(location.search);
+    const section = params.get('section');
+    if (section) {
+      scrollToSection(section);
+      window.history.replaceState({}, '', '/');
+    }
+  }, [location]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

@@ -1,6 +1,7 @@
 
 import { Menu, Code } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 type NavbarProps = {
   isMenuOpen: boolean;
@@ -9,6 +10,18 @@ type NavbarProps = {
 };
 
 export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarProps) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId: string) => {
+    if (location.pathname === '/') {
+      scrollToSection(sectionId);
+    } else {
+      navigate(`/?section=${sectionId}`);
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card">
       <div className="container mx-auto px-4 py-4">
@@ -29,25 +42,25 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarPro
               Hackathon
             </Link>
             <button 
-              onClick={() => scrollToSection('services')} 
+              onClick={() => handleNavigation('services')} 
               className="text-gray-600 hover:text-primary transition-colors"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('about')} 
+              onClick={() => handleNavigation('about')} 
               className="text-gray-600 hover:text-primary transition-colors"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('testimonials')} 
+              onClick={() => handleNavigation('testimonials')} 
               className="text-gray-600 hover:text-primary transition-colors"
             >
               Testimonials
             </button>
             <button 
-              onClick={() => scrollToSection('contact')} 
+              onClick={() => handleNavigation('contact')} 
               className="button-primary"
             >
               Join Us
@@ -72,25 +85,25 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarPro
               Hackathon
             </Link>
             <button 
-              onClick={() => scrollToSection('services')} 
+              onClick={() => handleNavigation('services')} 
               className="block w-full text-left px-4 py-2 text-gray-600 hover:text-primary transition-colors"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('about')} 
+              onClick={() => handleNavigation('about')} 
               className="block w-full text-left px-4 py-2 text-gray-600 hover:text-primary transition-colors"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('testimonials')} 
+              onClick={() => handleNavigation('testimonials')} 
               className="block w-full text-left px-4 py-2 text-gray-600 hover:text-primary transition-colors"
             >
               Testimonials
             </button>
             <button 
-              onClick={() => scrollToSection('contact')} 
+              onClick={() => handleNavigation('contact')} 
               className="block w-full px-4 py-2 button-primary"
             >
               Join Us
