@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { useState } from "react";
@@ -85,10 +84,11 @@ const ContactForm = () => {
     console.log("Submitting form data:", formData);
 
     try {
-      const response = await fetch('https://dev.xruya.com:5432/send-email', {
+      const response = await fetch('https://dev.xruya.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
           name: `${formData.firstName} ${formData.lastName}`.trim(),
@@ -112,7 +112,8 @@ const ContactForm = () => {
 
       toast({
         title: "Success!",
-        description: "Your message has been sent successfully."
+        description: "Your message has been sent successfully.",
+        duration: 5000,
       });
 
       // Reset form
@@ -128,7 +129,8 @@ const ContactForm = () => {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
-        variant: "destructive"
+        variant: "destructive",
+        duration: 5000,
       });
     } finally {
       setIsSubmitting(false);
