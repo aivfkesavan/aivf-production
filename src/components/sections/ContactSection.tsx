@@ -84,25 +84,21 @@ const ContactForm = () => {
     console.log("Submitting form data:", formData);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://dev.xruya.com:5431/send-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          access_key: '18c4f53f-0e5b-4ff0-948d-7e8f8116edfa',
           name: `${formData.firstName} ${formData.lastName}`.trim(),
-          email: formData.email,
+          user_email: formData.email,
           subject: "New Contact Form Submission - AIVF",
           message: formData.message || "No message provided",
-          from_name: "AIVF Website Contact Form",
+          site: "www.aivf.io"
         })
       });
 
       console.log("API Response Status:", response.status);
-      const data = await response.json();
-      console.log("API Response Data:", data);
 
       if (!response.ok) {
         throw new Error('Failed to send message');
