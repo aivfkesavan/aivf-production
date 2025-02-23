@@ -57,11 +57,15 @@ const Index = () => {
     const params = new URLSearchParams(location.search);
     const section = params.get('section');
     if (section) {
-      // Add a small delay to ensure the page has loaded
+      // Add a longer delay to ensure the page has fully loaded and rendered
       setTimeout(() => {
-        scrollToSection(section);
-        window.history.replaceState({}, '', '/');
-      }, 100);
+        const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Clean up URL after successful scroll
+          window.history.replaceState({}, '', '/');
+        }
+      }, 500);
     }
   }, [location.search]);
 

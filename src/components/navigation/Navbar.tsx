@@ -12,13 +12,10 @@ export const Navbar = ({ isMenuOpen, setIsMenuOpen, scrollToSection }: NavbarPro
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleNavigation = async (sectionId: string) => {
+  const handleNavigation = (sectionId: string) => {
     if (location.pathname !== '/') {
-      // First navigate to home page
-      await navigate('/');
-      // Then add the section parameter
-      window.history.replaceState({}, '', `/?section=${sectionId}`);
-      // Let the Index component handle the scrolling via its useEffect
+      // First navigate to home page with the section parameter
+      navigate(`/?section=${sectionId}`);
     } else {
       scrollToSection(sectionId);
     }
