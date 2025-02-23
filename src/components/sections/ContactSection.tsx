@@ -70,6 +70,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submission started");
     
     if (!formData.email || !formData.firstName) {
       toast({
@@ -81,6 +82,7 @@ const ContactForm = () => {
     }
 
     setIsSubmitting(true);
+    console.log("Submitting form data:", formData);
 
     try {
       const response = await fetch('https://dev.xruya.com:5432/send-email', {
@@ -89,21 +91,28 @@ const ContactForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: `${formData.firstName} ${formData.lastName}`,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
           user_email: formData.email,
           subject: "New Contact Form Submission - AIVF",
-          message: formData.message,
+          message: formData.message || "No message provided",
           site: "www.aivf.io"
         })
       });
 
+      console.log("API Response:", response);
+
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const errorData = await response.json();
+        console.error("API Error:", errorData);
+        throw new Error(errorData.detail || 'Failed to send message');
       }
+
+      const data = await response.json();
+      console.log("API Success:", data);
 
       toast({
         title: "Success!",
-        description: "Your message has been sent successfully.",
+        description: "Your message has been sent successfully."
       });
 
       // Reset form
@@ -115,6 +124,7 @@ const ContactForm = () => {
       });
 
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
