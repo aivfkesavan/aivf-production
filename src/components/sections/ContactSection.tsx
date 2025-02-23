@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { useState } from "react";
@@ -74,8 +75,7 @@ const ContactForm = () => {
       toast({
         title: "Error",
         description: "Please fill in all required fields",
-        variant: "destructive",
-        duration: 3000,
+        variant: "destructive"
       });
       return;
     }
@@ -87,27 +87,23 @@ const ContactForm = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
         },
         body: JSON.stringify({
-          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          name: `${formData.firstName} ${formData.lastName}`,
           user_email: formData.email,
           subject: "New Contact Form Submission - AIVF",
-          message: formData.message || "No message provided",
+          message: formData.message,
           site: "www.aivf.io"
         })
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.detail || 'Failed to send message');
+        throw new Error('Failed to send message');
       }
 
       toast({
         title: "Success!",
         description: "Your message has been sent successfully.",
-        duration: 3000,
       });
 
       // Reset form
@@ -119,12 +115,10 @@ const ContactForm = () => {
       });
 
     } catch (error) {
-      console.error('Contact form error:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
-        variant: "destructive",
-        duration: 3000,
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
