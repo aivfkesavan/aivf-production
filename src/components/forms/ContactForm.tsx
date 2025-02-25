@@ -51,7 +51,7 @@ export const ContactForm = () => {
           email: formData.email,
           subject: "New Contact Form Submission - AIVF",
           message: message,
-          site: "www.aivf.io"
+          site: "https://www.aivf.io" // Added https:// protocol
         })
       });
 
