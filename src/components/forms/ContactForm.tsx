@@ -24,10 +24,14 @@ export const ContactForm = () => {
     e.preventDefault();
     console.log("Form submission started");
     
-    if (!formData.email || !formData.firstName) {
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+    const message = formData.message || "No message provided";
+
+    // Validate required fields
+    if (!formData.email || !formData.firstName || message.length < 10) {
       toast({
         title: "Error",
-        description: "Please fill in all required fields",
+        description: "Please fill in all required fields. Message must be at least 10 characters long.",
         variant: "destructive"
       });
       return;
@@ -37,16 +41,16 @@ export const ContactForm = () => {
     console.log("Submitting form data:", formData);
 
     try {
-      const response = await fetch('https://dev.xruya.com:5431/send-email', {
+      const response = await fetch('https://v3backend.nidum.ai/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          name: `${formData.firstName} ${formData.lastName}`.trim(),
-          user_email: formData.email,
+          name: fullName,
+          email: formData.email,
           subject: "New Contact Form Submission - AIVF",
-          message: formData.message || "No message provided",
+          message: message,
           site: "www.aivf.io"
         })
       });
@@ -54,7 +58,8 @@ export const ContactForm = () => {
       console.log("API Response Status:", response.status);
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        const errorData = await response.json();
+        throw new Error(errorData.errors?.[0]?.message || 'Failed to send message');
       }
 
       toast({
@@ -75,7 +80,7 @@ export const ContactForm = () => {
       console.error("Form submission error:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again later.",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
         variant: "destructive",
         duration: 5000,
       });
@@ -133,7 +138,7 @@ export const ContactForm = () => {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Leave us a message...
+          Message <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
@@ -141,7 +146,11 @@ export const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           rows={4}
+          required
+          minLength={10}
+          maxLength={1000}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+          placeholder="Please enter at least 10 characters..."
         ></textarea>
       </div>
 
