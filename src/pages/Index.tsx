@@ -53,18 +53,6 @@ const Index = () => {
     { name: "Partner 6", logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png" }
   ];
 
-  // Ensure Google Analytics pageview is triggered
-  useEffect(() => {
-    // Check if gtag function exists
-    if (typeof window !== 'undefined' && window.gtag) {
-      // Send pageview with the current page URL
-      window.gtag('config', 'G-NYGYKHVZD8', {
-        page_path: location.pathname + location.search
-      });
-      console.log('Google Analytics pageview triggered');
-    }
-  }, [location.pathname, location.search]);
-
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const section = params.get('section');
