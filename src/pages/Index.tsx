@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "@/components/navigation/Navbar";
@@ -53,11 +52,8 @@ const Index = () => {
     { name: "Partner 6", logo: "/lovable-uploads/1f33e550-7434-4985-bcbe-71f03ee8d40a.png" }
   ];
 
-  // Ensure Google Analytics pageview is triggered
   useEffect(() => {
-    // Check if gtag function exists
     if (typeof window !== 'undefined' && window.gtag) {
-      // Send pageview with the current page URL
       window.gtag('config', 'G-NYGYKHVZD8', {
         page_path: location.pathname + location.search
       });
@@ -69,12 +65,10 @@ const Index = () => {
     const params = new URLSearchParams(location.search);
     const section = params.get('section');
     if (section) {
-      // Add a longer delay to ensure the page has fully loaded and rendered
       setTimeout(() => {
         const element = document.getElementById(section);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
-          // Clean up URL after successful scroll
           window.history.replaceState({}, '', '/');
         }
       }, 500);
